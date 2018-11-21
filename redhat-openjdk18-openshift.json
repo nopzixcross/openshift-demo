@@ -27,7 +27,7 @@
             "name": "APPLICATION_NAME",
             "value": "openjdk-app",
             "required": true
-        },
+        }, 
         {
             "description": "Custom hostname for http service route.  Leave blank for default hostname, e.g.: <application-name>-<project>.<default-domain-suffix>",
             "displayName": "Custom http Route Hostname",
@@ -77,6 +77,13 @@
             "displayName": "ImageStream Namespace",
             "name": "IMAGE_STREAM_NAMESPACE",
             "value": "openshift",
+            "required": true
+        },
+        {
+            "description": "ImageStreams Tag",
+            "displayName": "Tag",
+            "name": "IMAGE_STREAM_TAG",
+            "value": "1.3",
             "required": true
         }
     ],
@@ -160,7 +167,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
-                            "name": "redhat-openjdk18-openshift:latest"
+                            "name": "redhat-openjdk18-openshift:${IMAGE_STREAM_TAG}"
                         }
                     }
                 },
