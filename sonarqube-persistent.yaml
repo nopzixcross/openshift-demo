@@ -96,8 +96,7 @@ objects:
             name: ${APPLICATION_NAME}-postgresql-data
         dnsPolicy: ClusterFirst
         restartPolicy: Always
-        securityContext:
-          runAsUser: 1000100001
+        securityContext: {}
         terminationGracePeriodSeconds: 30
         volumes:
         - name: ${APPLICATION_NAME}-postgresql-data
@@ -228,7 +227,8 @@ objects:
               name: ${APPLICATION_NAME}-data
         dnsPolicy: ClusterFirst
         restartPolicy: Always
-        securityContext: {}
+        securityContext: 
+          runAsUser: 1000100001
         terminationGracePeriodSeconds: 30
         volumes:
         - name: ${APPLICATION_NAME}-data
