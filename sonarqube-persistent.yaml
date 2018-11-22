@@ -120,7 +120,7 @@ objects:
     name: ${APPLICATION_NAME}-postgresql
   spec:
     accessModes:
-      - ReadWriteOnce
+      - ReadWriteMany
     resources:
       requests:
         storage: ${POSTGRESQL_VOLUME_CAPACITY}
