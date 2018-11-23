@@ -57,16 +57,7 @@ objects:
         securityContext: {}
         terminationGracePeriodSeconds: 30
     test: false
-    triggers: 
-		- imageChangeParams: 
-			automatic: true
-			containerNames:
-				- ${APPLICATION_NAME}
-			from:
-			  kind: ImageStreamTag
-			  name: '${APPLICATION_NAME}:${IMAGE_NAME}'
-			  namespace: ${IMAGE_PROJECT_NAME}
-		type: ImageChange
+    triggers: []
 - apiVersion: v1
   kind: Route
   metadata:
