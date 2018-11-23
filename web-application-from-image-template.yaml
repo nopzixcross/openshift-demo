@@ -47,7 +47,9 @@ objects:
           deploymentconfig: ${APPLICATION_NAME}
       spec:
         containers:
-        - image: ${IMAGE_PROJECT_NAME}/${APPLICATION_NAME}:${IMAGE_NAME}
+        - image: 
+          kind: ImageStreamTag
+          name: ${IMAGE_PROJECT_NAME}/${APPLICATION_NAME}:${IMAGE_NAME}
           imagePullPolicy: IfNotPresent
           name: ${APPLICATION_NAME}
           resources: {}
