@@ -47,7 +47,7 @@ objects:
           deploymentconfig: ${APPLICATION_NAME}
       spec:
         containers:
-        - image: ${IMAGE_PROJECT_NAME}/${APPLICATION_NAME}:${IMAGE_NAME}-${IMAGE_VERSION}
+        - image: ${IMAGE_PROJECT_NAME}/${APPLICATION_NAME}:${IMAGE_NAME}
           imagePullPolicy: IfNotPresent
           name: ${APPLICATION_NAME}
           resources: {}
@@ -85,11 +85,6 @@ parameters:
   displayName: Project Name where the image located
   name: IMAGE_PROJECT_NAME
   value: dev
-  required: true
-- description: Image Version
-  displayName: Image Version
-  name: IMAGE_VERSION
-  value: "1.0.0"
   required: true
 - description: Image Name
   displayName: Image Name
