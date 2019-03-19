@@ -133,7 +133,7 @@ objects:
       - ReadWriteOnce
     resources:
       requests:
-        storage: ${APPLICATION_NAME_VOLUME_CAPACITY}
+        storage: ${APPLICATION_VOLUME_CAPACITY}
 - apiVersion: v1
   kind: ImageStream
   metadata:
@@ -263,7 +263,7 @@ parameters:
   required: true
   value: 5Gi
 - description: Application Volume Capacity
-  name: APPLICATION_NAME_VOLUME_CAPACITY
+  name: APPLICATION_VOLUME_CAPACITY
   required: true
   value: 5Gi
 - description: Postgresql Database
