@@ -261,11 +261,11 @@ parameters:
 - description: PostgreSQL Volume Capacity
   name: POSTGRESQL_VOLUME_CAPACITY
   required: true
-  value: 5Gi
+  value: 2Gi
 - description: Application Volume Capacity
   name: APPLICATION_VOLUME_CAPACITY
   required: true
-  value: 5Gi
+  value: 2Gi
 - description: Postgresql Database
   displayName: Postgresql Database
   name: POSTGRESQL_DATABASE
@@ -305,7 +305,7 @@ parameters:
 - name: POSTGRESQL_LIMIT_CPU
   displayName: PostgreSQL CPU Resource Limit
   description: PostgreSQL container resource limit for CPU
-  value: "200m"
+  value: "600m"
 - name: POSTGRESQL_REQUEST_CPU
   displayName: PostgreSQL CPU Resource Request Limit
   description: PostgreSQL container resource request limit for CPU
@@ -313,7 +313,7 @@ parameters:
 - name: POSTGRESQL_LIMIT_MEM
   displayName: PostgreSQL Memory Resource Limit
   description: PostgreSQL container resource limit for memory
-  value: "200Mi"
+  value: "1Gi"
 - name: POSTGRESQL_REQUEST_MEM
   displayName: PostgreSQL Memory Resource Request Limit
   description: PostgreSQL container resource request limit for memory
